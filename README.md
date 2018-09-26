@@ -106,9 +106,12 @@ De scripts kunnen in crontab opgenomen worden om elk uur uit te laten voeren. Ee
 58 * * * *  www-data    /opt/news-downloader/nos.pl nosheadlines.mp3
 
 # ANWB verkeer
-5-59/10 * * * * www-data    /opt/news-downloader/anwb.pl
+27,57 * * * * www-data    /opt/news-downloader/anwb.pl
 
 # NOS nieuws minuut video
 */30 * * * *    www-data    /opt/news-downloader/nos.pl nieuwsminuut.mpeg
 ```
+
+**Let op!** de timing zoals deze in de crontab staat is van belang.
+Zo mag het NOS nieuws niet eerder dan minuut 58 opgehaald worden. Ook het ANWB nieuws zal ook allen correct werken als deze op minuut 27 en 57 wordt opgehaald.
 
